@@ -10,7 +10,7 @@
           <field name="arch" type="xml">
             <data>
             <xpath expr="//field[@name='filter']" position="after">
-                <field name="od_detail" attrs="{'invisible':[('filter', '!=', 'filter_date')]}"/>
+                <field name="od_detail" attrs="{'invisible':[('filter', '=', 'filter_no')]}"/>
             </xpath>
             </data>
           </field>

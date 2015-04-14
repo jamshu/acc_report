@@ -7,7 +7,7 @@ class account_entries_report(osv.osv):
         'move_id':fields.many2one('account.move', 'Move'),
     }
     
-
+#                l.od_cost_centre_id as od_cost_centre_id,
     def init(self, cr):
         tools.drop_view_if_exists(cr, 'account_entries_report')
         cr.execute("""
@@ -50,9 +50,8 @@ class account_entries_report(osv.osv):
                 l.amount_currency as amount_currency,
                 l.debit as debit,
                 l.credit as credit,
-                l.debit-l.credit as balance,
-                l.od_cost_centre_id as od_cost_centre_id,
-                l.od_product_brand_id as od_product_brand_id
+                l.debit-l.credit as balance
+
             from
                 account_move_line l
                 left join account_account a on (l.account_id = a.id)

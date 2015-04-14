@@ -6,7 +6,9 @@
     "category" : "Accounting AND Finance",
     "description": """OrchidERP Accounting Reports""",
     "website": ["http://www.orchiderp.com"],
-    "depends": ['report_webkit','orchid_report','orchid_cost_centre'],
+    "depends": ['report_webkit','orchid_report',
+#'orchid_cost_centre'
+],
     "data" : [
             'wizard/account_report_partner_ledger_view.xml',
             'wizard/account_report_general_ledger_view.xml',
